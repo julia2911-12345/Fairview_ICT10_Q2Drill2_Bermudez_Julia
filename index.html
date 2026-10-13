@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dance Club Checker</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <style>
+
+        body {
+            background: #f7f0ff;
+            font-family: Arial, sans-serif;
+            color: #30243a;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header Top Part */
+
+        header {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        h1 {
+            color: #6f2dbd;
+            font-size: 38px;
+            letter-spacing: 2px;
+            margin: 20px 0 8px;
+            text-shadow: 2px 2px #e8caff;
+        }
+
+        .subtitle {
+            color: #a0449b;
+            font-size: 13px;
+            letter-spacing: 3px;
+        }
+
+        /* Styling for the form part */
+
+        .container {
+            width: 450px;
+            margin-top: 35px;
+            padding: 35px;
+            background: white;
+            border: 3px solid #c77dff;
+            border-radius: 18px;
+            box-shadow: 7px 7px 0 #ff4fa3;
+        }
+
+        input {
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 17px;
+            background: #faf5ff;
+            color: #30243a;
+            border: 2px solid #d8b9ed;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+
+        button {
+            padding: 16px;
+            background: #6f2dbd;
+            color: white;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 3px;
+
+        }
+
+
+        /* Styling for result */
+
+        #result {
+            width: 450px;
+            margin-top: 28px;
+            padding: 20px;
+            background: #30243a;
+            color: #ffffff;
+            border-left: 6px solid #ff4fa3;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 17px;
+            font-weight: bold;
+            box-shadow: 5px 5px 0 #c77dff;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+<!-- Title -->
+        <h1>ADD NEW MEMBER</h1>
+
+        <div class="subtitle">
+            OBMC FAIRVIEW • ADD MEMBERS
+        </div>
+
+    </header>
+
+<!-- Form Part, Where users enter information -->
+    <div class="container">
+
+        <input
+            type="text"
+            id="first_name"
+            placeholder="First Name">
+
+        <input
+            type="text"
+            id="last_name"
+            placeholder="Last Name">
+
+<!-- button to check, runs python function -->
+
+        <button py-click="add_candidate">
+            ADD MEMBER
+        </button>
+
+    </div>
+
+<!-- Where results will be displayed -->
+
+    <div id="result">
+        Enter your name to add your membership.
+    </div>
+
+
+    <script type="py" src="./main.py"></script>
+
+</body>
+
+</html>
